@@ -1,12 +1,11 @@
 import "@logseq/libs";
 
-
 const main = async () => {
-  var isOn = true
+  var isOn = true;
   logseq.provideModel({
     toggleRTL() {
       logseq.App.showMsg("isOn");
-      console.log(isOn)
+      console.log(isOn);
       if (isOn) {
         logseq.provideStyle({
           key: `mainStyle`,
@@ -46,7 +45,9 @@ const main = async () => {
           `,
         });
       } else {
-        logseq.provideStyle({ key: "mainStyle", style: `.block-children-left-border {
+        logseq.provideStyle({
+          key: "mainStyle",
+          style: `.block-children-left-border {
       }
       .block-children {
     }
@@ -54,8 +55,9 @@ const main = async () => {
     }
     .content {
     }
-      `});
-        isOn = true
+      `,
+        });
+        isOn = true;
         logseq.App.registerUIItem("toolbar", {
           key: "toggleRTLbtn",
           template: `
