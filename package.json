@@ -1,6 +1,6 @@
 {
-  "name": "logseq-rtl-plugin",
-  "version": "1.0",
+  "name": "logseq-rtl-mode-plugin",
+  "version": "1.0.1",
   "description": "RTL Plugin",
   "main": "dist/index.html",
   "targets": {
@@ -14,11 +14,11 @@
   "author": "Aryan Sawhney",
   "license": "MIT",
   "dependencies": {
-    "@logseq/libs": "0.0.1-alpha.34"
+    "@logseq/libs": "0.0.1-alpha.35"
   },
   "logseq": {
-    "id": "logseq-rtl-plugin",
-    "title": "logseq-rtl-plugin",
+    "id": "logseq-rtl-mode-plugin",
+    "title": "logseq-rtl-mode-plugin",
     "icon": "./icon.png"
   },
   "devDependencies": {
