@@ -1,11 +1,12 @@
 import "@logseq/libs";
 
+// const settings = [{}]
+
 const main = async () => {
+  // logseq.useSettings
   var isOn = true;
   logseq.provideModel({
     toggleRTL() {
-      logseq.App.showMsg("isOn");
-      console.log(isOn);
       if (isOn) {
         logseq.provideStyle({
           key: `mainStyle`,
@@ -33,6 +34,9 @@ const main = async () => {
   .content {
     direction: rtl;
   }
+  .ls-page-title.title {
+    direction: rtl;
+}
     `,
         });
         isOn = false;
@@ -54,6 +58,9 @@ const main = async () => {
     .block-content-wrapper {
     }
     .content {
+    }
+    .ls-page-title.title {
+      direction: rtl;
     }
       `,
         });
