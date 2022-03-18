@@ -2,6 +2,46 @@ import "@logseq/libs";
 
 // const settings = [{}]
 
+function checkKeyboard(e){
+    console.log(e.keyCode);
+    console.log(e)
+    if (e.code == 'ArrowRight') {
+      console.log("you are mean")
+            // https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent
+            const keyboardEvent = new KeyboardEvent('keydown', {
+                key: 'ArrowLeft',
+                keyCode: 37,
+                bubbles: false,
+                cancelable: false,
+                shiftKey: false,
+                ctrlKey: false,
+                altKey: false,
+                metaKey: false,
+            });
+  
+            // https://stackoverflow.com/a/44190874/12101554
+            // replace `document` with a specific element if you want to do a specific
+            top.dispatchEvent(keyboardEvent)
+            top.dispatchEvent(keyboardEvent);};
+            if (e.code == 'ArrowLeft') {
+              console.log("you are nice")
+            // https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent
+            const keyboardEvent = new KeyboardEvent('keydown', {
+                key: 'ArrowRight',
+                keyCode: 39,
+                bubbles: false,
+                cancelable: false,
+                shiftKey: false,
+                ctrlKey: false,
+                altKey: false,
+                metaKey: false,
+            });
+  
+            // https://stackoverflow.com/a/44190874/12101554
+            // replace `document` with a specific element if you want to do a specific
+            top.dispatchEvent(keyboardEvent)
+            top.dispatchEvent(keyboardEvent);};
+}
 const main = async () => {
   // logseq.useSettings
   var isOn = true;
@@ -47,8 +87,18 @@ const main = async () => {
               <i class="ti ti-toggle-right"></i>
             </a>
           `,
+
+          
         });
+
+        top.addEventListener('keydown', checkKeyboard);
+        
+        // Your TamperMonkey script starts here
       } else {
+        // removeEventListener()
+        //remove event listener
+        top.removeEventListener('keydown', checkKeyboard);
+        console.log("removal")
         logseq.provideStyle({
           key: "mainStyle",
           style: `.block-children-left-border {
@@ -87,3 +137,4 @@ const main = async () => {
 };
 
 logseq.ready(main).catch(console.error);
+
