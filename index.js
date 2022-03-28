@@ -99,7 +99,6 @@ const main = async () => {
     .content {
     }
     .ls-page-title.title {
-      direction: rtl;
     }
       `,
         });
