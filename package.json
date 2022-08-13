@@ -1,6 +1,6 @@
 {
   "name": "logseq-rtl-mode-plugin",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "RTL Plugin",
   "main": "dist/index.html",
   "targets": {
