@@ -39,7 +39,7 @@ function checkKeyboard(e) {
   }
 }
 const main = async () => {
-  // logseq.useSettings
+  
 const settings: SettingSchemaDesc[] = [
   {
     key: "rtlKeyBinding",
@@ -49,6 +49,8 @@ const settings: SettingSchemaDesc[] = [
     title: "Keybinding"
   },
 ]
+
+logseq.useSettingsSchema(settings)
   const toggleRTLMode=() => {
     if (isOn) {
       logseq.provideStyle({
